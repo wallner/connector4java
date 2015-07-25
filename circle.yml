@@ -1,3 +1,5 @@
 test:
   override:
-    - mvn verify
+    - gradle check jacocoTestReport
+  post:
+    - cp -R build/reports/* $CIRCLE_ARTIFACTS
