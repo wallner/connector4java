@@ -74,7 +74,7 @@ class OsiamUserService extends AbstractOsiamService<User> {
         StatusType status;
         String content;
         try {
-            Response response = targetEndpoint.path("me").request(MediaType.APPLICATION_JSON)
+            Response response = targetEndpoint.path("Me").request(MediaType.APPLICATION_JSON)
                     .header("Authorization", BEARER + accessToken.getToken())
                     .property(ClientProperties.CONNECT_TIMEOUT, getConnectTimeout())
                     .property(ClientProperties.READ_TIMEOUT, getReadTimeout())
